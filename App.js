@@ -23,7 +23,7 @@ export default function App() {
       </ScrollView> */}
       <View style={styles.scrollView}>
         <FlatList
-          data={[]}
+          data={pokemonList}
           renderItem={({ item }) => {
             return (
               <View style={styles.card} key={item.id}>
@@ -39,6 +39,12 @@ export default function App() {
             <View style={styles.noItemsContainer}>
               <Text style={styles.noItems}>No items found</Text>
             </View>
+          }
+          ListHeaderComponent={
+            <Text style={styles.headerText}>Pokemon List</Text>
+          }
+          ListFooterComponent={
+            <Text style={styles.footerText}>End of List</Text>
           }
         />
       </View>
@@ -73,5 +79,15 @@ const styles = StyleSheet.create({
   noItems: {
     fontSize: 24,
     textAlign: "center",
+  },
+  headerText: {
+    fontSize: 24,
+    textAlign: "center",
+    marginTop: 12,
+  },
+  footerText: {
+    fontSize: 24,
+    textAlign: "center",
+    marginTop: 12,
   },
 });
