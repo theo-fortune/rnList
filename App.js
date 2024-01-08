@@ -11,16 +11,6 @@ import pokemonList from "./data.json";
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <ScrollView style={styles.scrollView}>
-        {pokemonList.map((pokemon) => {
-          return (
-            <View style={styles.card} key={pokemon.id}>
-              <Text style={styles.cardText}>{pokemon.type}</Text>
-              <Text style={styles.cardText}>{pokemon.name}</Text>
-            </View>
-          );
-        })}
-      </ScrollView> */}
       <View style={styles.scrollView}>
         <FlatList
           data={pokemonList}
